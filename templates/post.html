@@ -31,7 +31,7 @@
                 <hr>
                 {% if current_user.id == 1 %}
                 <div class="clearfix">
-                    <a class="btn btn-primary float-right" href="{{url_for('edit_post', post_id=post.id)}}">Edit
+                    <a class="btn btn-primary float-right" href="{{url_for('edit_post', post_id=post.id)}}">Modifica
                         Post</a>
                 </div>
                 {% endif %}
@@ -41,7 +41,7 @@
 
                 {{ ckeditor.load() }}
                 {{ ckeditor.config(name='comment_text') }}
-                {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+                {{ wtf.quick_form(form, novalidate=True, button_map={"invia": "primary"}) }}
 
 
                 <div class="col-lg-8 col-md-10 mx-auto comment">
